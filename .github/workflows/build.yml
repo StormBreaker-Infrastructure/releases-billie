@@ -75,7 +75,7 @@ jobs:
           cp -r /home/runner/billie/out/dist/modules/* ./
           git add --all
           git commit -m "[CI]: Update artifacts from ${COMMIT_ID}"
-          git push https://github.com/StormBreaker-Releases/device_oneplus_billie-kernel main
+          git push https://x-access-token:${GH_TOKEN}@github.com/StormBreaker-Releases/device_oneplus_billie-kernel main
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
